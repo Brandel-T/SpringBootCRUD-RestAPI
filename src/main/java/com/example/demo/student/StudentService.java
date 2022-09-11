@@ -34,13 +34,12 @@ public class StudentService {
 
     public void addNewStudent(Student student)
     {
-        /*
+        // adding some business logic
         Optional<Student> studentByEmail = studentRepository
                 .findStudentByEmail( student.getEmail() );
         if ( studentByEmail.isPresent() ) {
             throw new IllegalStateException("Email taken");
         }
-         */
         studentRepository.save(student);
         System.out.println(student);
     }
